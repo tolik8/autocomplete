@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+$(function() {
+    $("#skill_input").autocomplete({
+        source: "search.php",
+        select: function( event, ui ) {
+            event.preventDefault();
+            $("#skill_id").val(ui.item.id);
+            $("#skill_input").val(ui.item.value);
+        }
+    });
+});
+</script>
+</head>
+<body>
+    
+    <form method="POST" action="get.php">
+        <div class="auto-widget">
+            <input type="hidden" id="skill_id" name="skill_id" />
+            <p>Your Skills: <input type="text" id="skill_input" name="skill_name" /></p>
+            <input type="submit" value="Send">
+        </div>
+    </form>
+
+</body>
+</html>
