@@ -2,7 +2,7 @@
 
 // Database configuration
 $dbHost     = 'localhost';
-$dbUsername = 'root';
+$dbUsername = 'test';
 $dbPassword = '';
 $dbName     = 'test';
 

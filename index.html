@@ -4,21 +4,6 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script>
-$(function() {
-    $("#skill_input").autocomplete({
-        source: "search.php",
-        select: function( event, ui ) {
-            event.preventDefault();
-            $("#skill_id").val(ui.item.id);
-            $("#skill_input").val(ui.item.value);
-        }
-    });
-});
-</script>
 </head>
 <body>
     
@@ -30,5 +15,9 @@ $(function() {
         </div>
     </form>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
